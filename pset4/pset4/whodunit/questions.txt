@@ -1,0 +1,13 @@
+1.  stdint.h - allows programmer to define the size of specific types... eliminating ambiguity when porting amongst different systems... e.g. a 32-bit system vs a 16-bit system. 
+2.  unt8_t - unsigned 8 bit integer; uint32_t; int32_t; uint16_t
+    uint#_t specifies an unsigned integer of size #bits whereas int#_t specifies a signed integer of size #
+    signed vs unsigned - signed is a value that can hold positive or negative values whereas unsigned is a value that can only be positive
+3.  BYTE - 1 byte; DWORD 4 bytes (32 bits); LONG 8 bytes (32 bits); WORD 2 bytes (16 bits)
+4.  ASCII - BM
+5.  bfsize - size of whole BMP file; bisize - size of the header file
+6.  "If biHeight is negative, the bitmap is a top-down DIB with the origin at the upper left corner"
+7.   LONG biXPelsPerMeter and LONG biYPelsPerMeter
+8.  
+9.  specifies to read only a single element
+10. 3 
+11.  

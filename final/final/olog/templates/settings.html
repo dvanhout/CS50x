@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+
+
+<html>
+    <head>
+
+        <title>Outdoor Log Book</title>
+
+    </head>
+    <body>
+    <form action="{{ url_for('settings') }}" method="post">
+        <fieldset>
+            <h4> Change password</h4>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="new_pass" placeholder="enter new password" type="password"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="pass_confirm" placeholder="enter again" type="password"/>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default" type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,26 @@
+Complete registration
+Setup database:
+    users (username, hash, user_id)
+    trips (title, date_from, date_to, type, participants, role, description, trip_id, user_id)
+    weather (used for trips.... temp, precip, precip_type, windsp, winddir, press, humidity, trip_id, weather_id
+    awards (date_from, date_to, trainer, cert_name, link, image?, user_id)
+    incidents (date, type, description, trip_id, incident_id)
+    settings (color? 
+    profile? (user_id, profile_id, first_name, last_name, address_1, address_2, address_3, city, county, postal_code, photo(separate db), information 
+Complete webpages
+    login.html
+    logout.html
+    registration.html
+    settings.html
+    awards.html
+    trips.html
+
+
+
+Some other items to do (javascript functions)
+    Output logbook to a file format... pdf?  Downloadable for now
+    Alerts for training expirations
+    Google maps that grabs coordinates for a trip by touching or by entering coordinates
+    Grab weather data for trips based on coordinates (darksky)
+
+

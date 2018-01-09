@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  </head>
+  <body>
+	<center>
+		<div class="login">
+			<h1 class="loginheading">Login</h1>
+			<form method="post" action=".php">
+					<div class="form-group nameInput has-feedback">
+						<label for="name">Username</label>
+						<input type="text" class="form-control" name="name" id="name" placeholder="Type something to see validation...">
+					</div>
+					<div class="form-group emailInput has-feedback">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Don't type here to see validation...">
+					</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+				<p class="loginbottomtext">Still don't have an account? <a>Register</a></p>
+			</form>
+		</div>
+	</center>
+  </body>
+  <script src="scripts.js"></script>
+</html>

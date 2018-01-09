@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('login') }}" method="post">
+        <fieldset>
+        <div class="container">
+            <form action="/login" data-toggle="validator" id="login" method="get">
+                <div class="form-group">    
+                    <input class="form-control" name="useremail" placeholder="Username or Email" required type="text"/>
+                    <div class="help-block with-errors"></div>
+                </div>                
+                <div class="form-group">
+<!--                    <label for="email" class="control-label">Password</label>  -->
+                    <input class="form-control" data-minlength="8" name="password" placeholder="Password" required type="password"/>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default" type="submit">Log In</button>
+                </div>
+            </form>        
+        </div>
+        </fieldset>
+    </form>
+{% endblock %}

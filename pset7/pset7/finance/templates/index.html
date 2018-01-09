@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('index') }}" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><span style="font-weight:bold">SYMBOL</span></th>
+                    <th><span style="font-weight:bold">NAME</span></th>
+                    <th><span style="font-weight:bold">SHARES</span></th>
+                    <th><span style="font-weight:bold">PRICE</span></th>
+                    <th><span style="font-weight:bold">TOTAL</span></th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <th>{{ total }}</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>CASH</td>
+                    <td colspan="3"></td>
+                    <td>{{ cash }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+{% endblock %}

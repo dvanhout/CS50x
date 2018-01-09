@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Trips
+{% endblock %}
+
+{% block main %}
+
+
+<html>
+    <head>
+        <!-- https://developers.google.com/maps/documentation/javascript/adding-a-google-map-->
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ key }} &callback=initMap"></script>
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ key }}&amp;sensor=false&amp;libraries=geometry, places"></script>
+        
+        <script src="{{ url_for('static', filename='map.js') }}"></script>
+        
+        <script src='//js.zapjs.com/js/download.js'></script>
+        
+        <title>Outdoor Log Book</title>
+        
+        <style>
+            #map {
+            height: 400px;
+            width: 100%;
+            }
+        </style>
+
+    </head>
+    <body onload="initMap()">
+        
+        <h3>Log a New Trip</h3>
+       
+        <!-- buttons for trip data -->
+        <div id="floating-panel">
+            <input onclick="delete_markers();" type=button value="Clear All Markers"></br>
+            <input onclick="delete_poly();" type=button value="Clear Trip Path">
+        </div>
+       
+        <!-- the map -->
+        <div id="map"></div>
+       
+        <!-- trip details form entry 
+        <form action="{{ url_for('saveTrip') }}" method="post">
+            <fieldset>
+                <table class="table table-striped"> -->
+                    <p>Path Info:</br></p>
+                    <textarea rows="5" cols="80" id="ll"></textarea>
+                        <div class="form-group">
+                          <!--  <button class="btn btn-default" style="font-size:larger; color:white; background-color:blue" type="submit">SAVE THIS TRIP</button>-->
+                            <a href="" onclick="printPath();return false;">Show/Update Path</a>
+                        </div>
+
+        <!--            </tr>
+                </table>        -->
+            </fieldset>
+      <!--  </form>  -->
+            
+            <button onclick="createDownloadLink()">Download KML</button>
+            
+    </body>
+</html>
+{% endblock %}

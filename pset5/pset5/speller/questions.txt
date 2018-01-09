@@ -1,0 +1,14 @@
+0.  "...lung disease that is otherwise known as silicosis..." c/o https://en.wikipedia.org/
+1.  "get resource usage"
+2.  16
+3.  We need to pass the address of before and after variables in memory rather than a copy of the variables so that the size is
+    limited.  Passing a whole copy of a large struct would be be quite large. 
+4.  The for loop iterates through a word, one character at a time, loading them into an array (ignoring all but alphabetical letters
+    and apostrophes).  If words are too long (greater than set limit), move onto next word.  If words contain numbers, move onto next
+    word, in same manner as words exceeding size limit.  If all the above tests are passed, then we must have a word, so terminate 
+    the array with a null \0 character, increase word counter by 1.  Then set timer to start while calling to check function to see 
+    if word is spelled correctly.  If check function returns that word is misspelled, print to screen and update misspelled word
+    counter. Reset word array index to 0 in preparation for next word. 
+5.  Using fgetc, rather than fscanf, we are able to more easily account for unwanted characters such as numbers, commas, periods,
+    punctuation, symbols, etc.  fscanf may also unwantedly overwrite memory if a string is too large given a different dictionary. 
+6.  By using const, it is forbidden to change the variables in the function themselves.
